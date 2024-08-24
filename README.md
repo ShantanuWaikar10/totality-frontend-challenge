@@ -7,3 +7,8 @@ This is a property booking web application where user can view the properties an
 This application has a login and register functionality. When a user login they will able to see their name at top and signup and signin buttons will be replaced with logout button
 
 ## Tech stack used
+
+- **Frontend**: Next.js, Tailwind CSS, Redux Toolkit.
+- **Backend and Database**: Next.js, MongoDB with Mongoose.
+- **Authentication**: NextAuth.
+- **Deployment**: Vercel for serverless deployment.
