@@ -20,3 +20,5 @@ This application has a login and register functionality. When a user login they 
 - **Add Item to Cart**: The "Add to Cart" feature allows users to select property they wish to purchase and save them in a booking cart, providing a seamless booking experience. I use Redux Toolkit to manage the cart state globally, allowing different components to interact with the cart. The "Book Now" button is integrated with the product display components, dispatching the addItem action when clicked. The cart provides instant feedback to users by updating the cart icon or displaying a confirmation message when an property is added.
 
 - **User Login and Register**: User authentication is essential for personalized experiences, allowing users to log in, access their accounts, and register for new accounts. Both the login and registration forms include client-side validation. Server-side errors (e.g., invalid credentials, email already in use) are captured and displayed to the user.
+
+Website: [[(https://totality-frontend-challenge-kohl.vercel.app/)](https://totality-frontend-challenge-kohl.vercel.app/)]
