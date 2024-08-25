@@ -24,14 +24,14 @@ const cartSlice = createSlice({
     incrementQty: (state, action) => {
       const cartId = action.payload;
       const existingItem = state.find((item) => item.id === cartId);
-      if (existingItem) {
+      if (existingItem.qty > 0 && existingItem) {
         existingItem.qty += 1;
       }
     },
     decrementQty: (state, action) => {
       const cartId = action.payload;
       const existingItem = state.find((item) => item.id === cartId);
-      if (existingItem) {
+      if (existingItem && existingItem.qty>=2) {
         existingItem.qty -= 1;
       }
     },
