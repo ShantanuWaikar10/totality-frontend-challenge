@@ -5,13 +5,24 @@ import Link from "next/link";
 import React from "react";
 import { Button, Input } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function Cart() {
+  const router = useRouter();
   const [mobile, setMobile] = React.useState("");
   const handleMobileChange = (event) => setMobile(event.target.value);
 
   const [name, setName] = React.useState("");
   const handleNameChange = (event) => setName(event.target.value);
+
+  const handleBook = () => {
+    if (!name && !mobile) {
+      toast.error("All fields are required");
+    } else {
+      router.push("/booked");
+    }
+  };
 
   const cartItems = useSelector((store) => store.cart);
 
@@ -72,12 +83,12 @@ export default function Cart() {
                 size="md"
               />
               <div className="my-5">
-                <Link
-                  href="/booked"
+                <Button
+                  onClick={handleBook}
                   className="bg-slate-200 text-slate-900 rounded-lg  py-2 px-4 font-normal"
                 >
                   Book
-                </Link>
+                </Button>
               </div>
             </div>
           ) : (
