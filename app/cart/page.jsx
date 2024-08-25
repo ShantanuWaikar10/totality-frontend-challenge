@@ -17,7 +17,7 @@ export default function Cart() {
   const handleNameChange = (event) => setName(event.target.value);
 
   const handleBook = () => {
-    if (!name && !mobile) {
+    if (!name || !mobile) {
       toast.error("All fields are required");
     } else {
       router.push("/booked");
